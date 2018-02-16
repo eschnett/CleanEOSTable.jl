@@ -4,11 +4,9 @@ using HDF5
 
 mktempdir() do path
     println("Downloading...")
-    download("https://stellarcollapse.org/EOS/LS220_234r_136t_50y_analmu_20091212_SVNr26.h5.bz2")
+    download("https://stellarcollapse.org/EOS/LS220_234r_136t_50y_analmu_20091212_SVNr26.h5.bz2",
+             "$path/LS220_234r_136t_50y_analmu_20091212_SVNr26.h5.bz2")
     println("Unpacking...")
-    run(`pwd`)
-    run(`ls`)
-    run(`ls $path`)
     run(`bunzip2 $path/LS220_234r_136t_50y_analmu_20091212_SVNr26.h5.bz2`)
 
     tablename = joinpath(path, "$path/LS220_234r_136t_50y_analmu_20091212_SVNr26.h5")
