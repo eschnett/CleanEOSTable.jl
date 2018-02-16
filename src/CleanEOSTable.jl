@@ -236,7 +236,7 @@ function cleanEOSTable(tablename::AbstractString,
 
     println("Writing corrected table...")
     new_table = h5open(new_tablename, "w")
-    write(new_table, "corrected_logenergy", new_table_logenergy)
+    write(new_table, "logenergy", new_table_logenergy)
     close(new_table)
 
     println("Done.")
