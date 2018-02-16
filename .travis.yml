@@ -2,7 +2,10 @@
 language: julia
 os:
   - linux
-  - osx
+  # 2018-02-15 Erik Schnetter: Installing HDF5 via Homebrew is broken;
+  # there is a weird conflict that prevents GCC 7.3 from being
+  # installed.
+  # - osx
 julia:
   - 0.6
   - nightly
